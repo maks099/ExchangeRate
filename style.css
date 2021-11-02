@@ -1,0 +1,60 @@
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+main {
+  overflow-x: hidden;
+  display: flex;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+#main h1 {
+    text-decoration: none;
+    -webkit-transition: 1s ease;
+           -moz-transition: 1s ease;
+         -o-transition: 1s ease;
+            transition: 1s ease;
+}
+
+#main h1:hover {
+    -webkit-transform: scale(1.1);
+           -moz-transform: scale(1.1);
+             -o-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+section {
+  min-width: 400px;
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4ch;
+}
+
+main section:hover {
+    padding-top: 40px;
+    margin-bottom: calc(1em - 40px);
+    background-color: #333;
+  }
+
+section:nth-child(even) {
+  background-color: teal;
+  color: white;
+}
+
+
+
+
+
+
+
+
+
+

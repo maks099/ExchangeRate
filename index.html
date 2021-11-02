@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>
+
+        </title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <main>
+            <section>
+              <h1>Beep</h1>
+            </section>
+            <section>
+              <h1>Boop</h1>
+            </section>
+            <section>
+              <h1>Boooom</h1>
+            </section>
+              <section>
+              <h1>The End</h1>
+            </section>
+            <section>
+            <h1>Beep</h1>
+            </section>
+            <section>
+            <h1>Boop</h1>
+            </section>
+            <section>
+            <h1>Boooom</h1>
+            </section>
+            <section>
+            <h1>The End</h1>
+            </section>
+          </main>
+          
+    </body>
+    <script>
+        const scrollContainer = document.querySelector("main");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+    </script>
+</html>

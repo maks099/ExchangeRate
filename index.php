@@ -1,10 +1,3 @@
-<script>
-    function myFunction() {
-        // here add
-    }
-</script>
-
-
 <form method="POST" >
     
   <select id="cmbMake" name="Make" onchange="document.getElementById('selected_text').value=this.options[this.selectedIndex].text">
@@ -19,9 +12,7 @@
 <?php
 
 if(isset($_POST['search'])){
-    ?>
-    <button onclick="myFunction()">Show stat</button>
-<?php
+
     $moneyCode = $_POST['Make'];
 
     $json = file_get_contents('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5');
@@ -38,7 +29,7 @@ if(isset($_POST['search'])){
     $date->modify("-1 days")->format('Y-m-d');
     for($i = 0; $i < 2; $i++){
         echo date_format($date, 'd.m.Y');
-        //printRateAdDate($date, $moneyCode);
+        printRateAdDate($date, $moneyCode);
         $date->modify("-1 days")->format('Y-m-d');
     }
 }
@@ -52,7 +43,7 @@ function printRateAdDate($date, $moneyCode){
     }
     $json = file_get_contents('https://api.privatbank.ua/p24api/exchange_rates?json&date='.date_format($date, 'd.m.Y'));
     $obj = json_decode($json);
-    echo ($obj->exchangeRate[$moneyCode]->currency);
+    //echo ($obj->exchangeRate[$moneyCode]->currency);
     echo (" Купівля: ".$obj->exchangeRate[$moneyCode]->saleRateNB);
     echo (" Продаж: ".$obj->exchangeRate[$moneyCode]->purchaseRateNB)."<br>";
 }
