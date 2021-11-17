@@ -67,7 +67,7 @@
         function a1_onclick(id) {
             //alert(a1);
             document.getElementById(id).style.backgroundColor = "#000000";
-            window.location = 'http://localhost/exchange_rate/currencyPage.php?p='+id;
+            window.location = 'currencyPage.php?p='+id;
            
             
         }
