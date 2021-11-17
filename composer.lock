@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e7aa7b9d38010bae3228616f5bc3abe1",
+    "content-hash": "f813d3c1c78c5c109a600c6733442e4c",
     "packages": [
         {
             "name": "kurstoday/api",
@@ -61,7 +61,8 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "ext-gd": " *"
+        "ext-gd": " *",
+        "ext-mbstring": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.1.0"

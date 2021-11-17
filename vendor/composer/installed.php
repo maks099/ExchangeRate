@@ -5,7 +5,7 @@
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'dc9a93a7125ae64c97f2ca8f2ad1ed1469789534',
+        'reference' => '8846504059bdc83c264da7d0c03ce5605f67983a',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'dc9a93a7125ae64c97f2ca8f2ad1ed1469789534',
+            'reference' => '8846504059bdc83c264da7d0c03ce5605f67983a',
             'dev_requirement' => false,
         ),
         'kurstoday/api' => array(
