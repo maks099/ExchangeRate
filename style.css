@@ -1,53 +1,113 @@
-html,
-body {
-  margin: 0;
-  font-family: sans-serif;
+
+
+
+
+
+
+
+.centerDiv{
+  margin-top: 35px;
+  height: 100px;
 }
 
-main {
-  overflow-x: hidden;
-  display: flex;
-}
+
 
 h1 {
   margin: 0;
   padding: 0;
 }
 
-#main h1 {
-    text-decoration: none;
-    -webkit-transition: 1s ease;
-           -moz-transition: 1s ease;
-         -o-transition: 1s ease;
-            transition: 1s ease;
+
+
+.main {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  height: 210px;
 }
 
-#main h1:hover {
-    -webkit-transform: scale(1.1);
-           -moz-transform: scale(1.1);
-             -o-transform: scale(1.1);
-            transform: scale(1.1);
+.specDiv{
+  background-color: #4CAF50;
 }
 
-section {
-  min-width: 400px;
-  min-height: 400px;
+   
+.overlay{ 
+  position: absolute; 
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 4ch;
+  transition: 0.5s ease; 
+  height: 200px; 
+  width: 200px; 
+  border-radius: 25px;
+  margin: 5px;
+  top: 5px; 
+  background-color: rgb(20, 18, 18); 
+  opacity: 0;
+} 
+
+.mainCurrencyDiv:hover .overlay { 
+  opacity: 0.9; 
+} 
+
+.mainCurrencyDiv {
+  height: 200px;
+  width: 200px;
+  border-radius: 25px;
+  margin: 5px;
+  text-decoration: none;
+  display: inline-block;
 }
 
-main section:hover {
-    padding-top: 40px;
-    margin-bottom: calc(1em - 40px);
-    background-color: #333;
-  }
 
-section:nth-child(even) {
-  background-color: teal;
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+.currencyBlock{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.currencyTitle{
+  font-size: 64pt;
   color: white;
 }
+
+.currencyButton {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:transparent;
+	border-radius:4px;
+  background-color: rgb(43, 176, 179);
+	border:2px solid #dfdfdf;
+	display:inline-block;
+	cursor:pointer;
+	color:#eeeeee;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+}
+
+
+
+
+
 
 
 

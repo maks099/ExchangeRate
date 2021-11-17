@@ -1,0 +1,28 @@
+{
+    "name": "kurstoday/api",
+    "description": "Бесплатный API клиент для получения курсов валют из сайта https://kurstoday.com/",
+    "keywords": [
+        "API для получения курсов валют",
+        "Курс валют в банках Украины",
+        "История курсов валют",
+        "Курс валют API",
+        "Курс валют на сайт"
+    ],
+    "authors": [
+        {
+            "name": "Oleksandr P.",
+            "email": "pavlovich.app@gmail.com"
+        }
+    ],
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "7.*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "kurstoday\\": "src/"
+        }
+    }
+}

@@ -1,54 +1,76 @@
-<form method="POST" >
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <?php include ('pageparts/header.php');?>
+        <div class="main">
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/dollars.jpg);">
+              </div>
+              <div class="overlay">
+                <button type="button" id="dollar" class="currencyButton" onclick="a1_onclick('dollar')">&#36; dollar
+                </button>
+
+              </div> 
+            </div>
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/euros.jpg);">
+              </div>
+              <div class="overlay">
+              <button type="button" id="euro" class="currencyButton" onclick="a1_onclick('euro')">&#8364;uro
+                </button>
+
+              </div> 
+            </div>
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/zlotyy.jpg);">
+              </div>
+              <div class="overlay">
+              <button type="button" id="zloty" class="currencyButton" onclick="a1_onclick('zloty')">zł
+                </button>
+              </div> 
+            </div>
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/pounds.jpg);">
+              </div>
+              <div class="overlay">
+              <button type="button" id="pound" class="currencyButton" onclick="a1_onclick('pound')">&#163; (Pound)
+                </button>
+              </div> 
+            </div>
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/ruble.jpg);">
+              </div>
+              <div class="overlay">
+              <button type="button" id="ruble" class="currencyButton" onclick="a1_onclick('ruble')">&#8381;uble
+                </button>
+              </div> 
+            </div>
+            <div class="mainCurrencyDiv">
+              <div class="currencyBlock" style="background-image: url(img/chf.jpg);">
+              </div>
+              <div class="overlay">
+              <button type="button" id="frank" class="currencyButton" onclick="a1_onclick('frank')">&#8355;rank
+                </button>
+              </div> 
+            </div>
+</div>
+          <?php include ('pageparts/footer.php');?>
+
+       
+    </body>
     
-  <select id="cmbMake" name="Make" onchange="document.getElementById('selected_text').value=this.options[this.selectedIndex].text">
-     <option value="0">USD</option>
-     <option value="1">EUR</option>
-     <option value="2">RUR</option>
-     <option value="3">BTC</option>
-</select>
-<input type="hidden" name="selected_text" id="selected_text" value="" />
-<input type="submit" name="search" value="Search"/>
-</form>
-<?php
-
-if(isset($_POST['search'])){
-
-    $moneyCode = $_POST['Make'];
-
-    $json = file_get_contents('https://api.privatbank.ua/p24api/pubinfo?json&exchange&coursid=5');
-    $obj = json_decode($json);
-    echo ($obj[$moneyCode]->ccy);
-    echo "<br>";
-    echo ("Купівля: ".$obj[$moneyCode]->buy);
-    echo "<br>";
-    echo ("Продаж: ".$obj[$moneyCode]->sale);
-    echo "<br>";
-    
-    echo "<br>Статистика<br>";
-    $date = new DateTime();
-    $date->modify("-1 days")->format('Y-m-d');
-    for($i = 0; $i < 2; $i++){
-        echo date_format($date, 'd.m.Y');
-        printRateAdDate($date, $moneyCode);
-        $date->modify("-1 days")->format('Y-m-d');
-    }
-}
-
-function printRateAdDate($date, $moneyCode){
-    
-    if($moneyCode == 1){
-        $moneyCode = 8;
-    } else if($moneyCode == 0){
-        $moneyCode = 23;
-    }
-    $json = file_get_contents('https://api.privatbank.ua/p24api/exchange_rates?json&date='.date_format($date, 'd.m.Y'));
-    $obj = json_decode($json);
-    //echo ($obj->exchangeRate[$moneyCode]->currency);
-    echo (" Купівля: ".$obj->exchangeRate[$moneyCode]->saleRateNB);
-    echo (" Продаж: ".$obj->exchangeRate[$moneyCode]->purchaseRateNB)."<br>";
-}
-
-/* що робити? 
-    -> лишити швидкість як є і поставити LoadingBar або GIF?
-    -> зробити з БД як думалось раніше*/
-
+<script language="javascript" type="text/javascript">
+        function a1_onclick(id) {
+            //alert(a1);
+            document.getElementById(id).style.backgroundColor = "#000000";
+            window.location = 'http://localhost/exchange_rate/currencyPage.php?p='+id;
+           
+            
+        }
+    </script>
+   
+</html>

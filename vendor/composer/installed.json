@@ -1,0 +1,56 @@
+{
+    "packages": [
+        {
+            "name": "kurstoday/api",
+            "version": "1.0",
+            "version_normalized": "1.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pavlovich-app/KursToday-API.git",
+                "reference": "0cac86c360d6f8e19ca74f1a16358da8f6174c85"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pavlovich-app/KursToday-API/zipball/0cac86c360d6f8e19ca74f1a16358da8f6174c85",
+                "reference": "0cac86c360d6f8e19ca74f1a16358da8f6174c85",
+                "shasum": ""
+            },
+            "require": {
+                "php": "7.*"
+            },
+            "time": "2020-05-16T01:33:40+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "kurstoday\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oleksandr P.",
+                    "email": "pavlovich.app@gmail.com"
+                }
+            ],
+            "description": "Бесплатный API клиент для получения курсов валют из сайта https://kurstoday.com/",
+            "keywords": [
+                "API для получения курсов валют",
+                "История курсов валют",
+                "Курс валют API",
+                "Курс валют в банках Украины",
+                "Курс валют на сайт"
+            ],
+            "support": {
+                "issues": "https://github.com/pavlovich-app/KursToday-API/issues",
+                "source": "https://github.com/pavlovich-app/KursToday-API/tree/master"
+            },
+            "install-path": "../kurstoday/api"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
