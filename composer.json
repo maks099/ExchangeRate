@@ -1,5 +1,6 @@
 {
     "require": {
-        "kurstoday/api": "^1.0"
+        "kurstoday/api": "^1.0",
+        "ext-gd":" *"
     }
 }
